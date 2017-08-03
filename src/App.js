@@ -13,7 +13,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('/data.json')
+    fetch(`${process.env.PUBLIC_URL}/data.json`)
     .then(response => response.json())
     .then((table) => {
       const [header, ...body] = table;
