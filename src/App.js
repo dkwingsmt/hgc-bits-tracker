@@ -17,8 +17,7 @@ class App extends Component {
     .then(response => response.json())
     .then((table) => {
       const [header, ...body] = table;
-      const timeIndex = _.findIndex(header, 'time');
-      return _.fromPairs(_.zip(header, ..._.sortBy(body, timeIndex)).map(line => [line[0], line.slice(1)]));
+      return _.fromPairs(_.zip(header, ...body).map(line => [line[0], line.slice(1)]));
     })
     .then((tableData) => {
       const { date,     // eslint-disable-line no-unused-vars
@@ -51,7 +50,7 @@ class App extends Component {
               type: 'time',
               time: {
                 displayFormats: {
-                  'hour': 'MMM D, k:00'
+                  'hour': 'MMM D, h:00A'
                 }
               }
             }],
@@ -79,7 +78,7 @@ class App extends Component {
             </Navbar.Brand>
           </Navbar.Header>
           <Nav>
-            <NavItem>{lastUpdateTime ? `Last update time: ${moment(lastUpdateTime).format('MMM D, k:mm')}` : ''}</NavItem>
+            <NavItem>{lastUpdateTime ? `Last update time: ${moment(lastUpdateTime).format('MMM D, h:mmA')}` : ''}</NavItem>
           </Nav>
         </Navbar>
         <div style={{ maxWidth: 800, margin: 'auto' }}>

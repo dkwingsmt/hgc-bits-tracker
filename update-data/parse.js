@@ -24,7 +24,7 @@ function readFromPipe() {
 function pickRows(table, maxRows) {
   const timeIndex = table[0].findIndex(a => a === 'time');
   const body = table.slice(2)     // Not counting header row and dummy row
-    .sort((a, b) => b[timeIndex] - a[timeIndex]);
+    .sort((a, b) => a[timeIndex] - b[timeIndex]);
   const bodyLength = body.length;
   if (bodyLength <= maxRows) {
     return table;
@@ -32,7 +32,7 @@ function pickRows(table, maxRows) {
   const step = Math.floor(bodyLength / maxRows);
   const initRow = bodyLength - step * (maxRows - 1) - 1;
   const resultTable = [table[0]];
-  for (let i = initRow; i < table.length; i += step) {
+  for (let i = initRow; i < body.length; i += step) {
     resultTable.push(body[i].map(number => parseInt(number, 10)));
   }
   return resultTable;
