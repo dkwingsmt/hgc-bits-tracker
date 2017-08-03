@@ -1,0 +1,31 @@
+{
+  "extends": "eslint-config-airbnb",
+  "env": {
+    "browser": true,
+    "node": true,
+  },
+  "globals": {
+    "gapi": true,
+  },
+  "rules": {
+    max-len: ["error", 280],
+    no-continue: 0,
+    no-param-reassign: ["error", { "props": false }],
+    "indent": [1, 2],
+    "react/prefer-stateless-function": 0,
+    "react/jsx-closing-bracket-location": 1,
+    "react/jsx-indent-props": [1, 2],
+    "react/jsx-indent": [1, 2],
+    "react/jsx-filename-extension": 0,
+    "jsx-a11y/href-no-hash": 0,
+    "semi": 2,
+    "prefer-es6-class": [0, 2],
+    "import/prefer-default-export": 0,
+    no-mixed-operators: 0,
+    "quote-props": ["error", "consistent"],
+    "no-console": ["error", { allow: [ "warn", "error" ] }],
+    "no-confusing-arrow": 0,
+    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "comma-dangle": ["error", {"functions": "never"}]
+  },
+}

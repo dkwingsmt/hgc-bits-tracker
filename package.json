@@ -1,0 +1,33 @@
+{
+  "name": "hgc-bits-tracker",
+  "version": "0.0.1",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dkwingsmt/hgc-bits-tracker"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build && rm -rf docs/ && mv build docs"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.94.0",
+    "chart.js": "^2.6.0",
+    "dynamodb-marshaler": "^2.0.0",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1",
+    "papaparse": "^4.3.5",
+    "react": "^15.6.1",
+    "react-bootstrap": "^0.31.2",
+    "react-dom": "^15.6.1",
+    "react-scripts": "1.0.10"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-config-react-app": "^1.0.5",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "react-scripts": "^1.0.10"
+  }
+}
