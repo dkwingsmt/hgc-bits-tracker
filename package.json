@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && rm -rf docs/ && mv build docs"
+    "build": "PUBLIC_URL=/hgc-bits-tracker react-scripts build && rm -rf docs/ && mv build docs"
   },
   "dependencies": {
     "aws-sdk": "^2.94.0",
