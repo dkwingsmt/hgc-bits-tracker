@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 import moment from 'moment';
-import { Nav, Navbar, NavItem } from 'react-bootstrap';
+import { Nav, Navbar, NavItem, ListGroup, ListGroupItem } from 'react-bootstrap';
 import Chart from 'chart.js';
 
 const INIT_SHOW_TEAMS = 10;
@@ -110,6 +110,9 @@ class App extends Component {
             yAxes: [{
               'position': 'left',
               'id': 'y-axis-0',
+              'ticks': {
+                'beginAtZero': true
+              },
               'scaleLabel': {
                 'display': true,
                 'labelString': 'Team bits'
@@ -117,6 +120,9 @@ class App extends Component {
             }, {
               'position': 'right',
               'id': 'y-axis-1',
+              'ticks': {
+                'beginAtZero': true
+              },
               'scaleLabel': {
                 'display': true,
                 'labelString': 'Overall bits'
@@ -130,11 +136,8 @@ class App extends Component {
           },
           tooltips: {
             callbacks: {
-              beforeTitle(tooltipItem) {
-                return tooltipItem.label;
-              },
               title(tooltipItem) {
-                return moment(tooltipItem.x).format('MMM D, h:mmA');
+                return moment(tooltipItem[0].xLabel).format('MMM D, h:mmA');
               }
             }
           }
