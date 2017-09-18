@@ -59,13 +59,14 @@ function getProgress(content) {
 }
 
 const teams = [
-  'blsm', 'ce', 'dig', 'eid', 'estar',
-  'exp', 'fnc', 'gfe', 'kt', 'ldy',
-  'lfive', 'mty', 'mvpb', 'mvpm', 'nav',
-  'nt', 'pd', 'roll', 'rpg', 'rrr',
-  'rvn', 'soa', 'spt', 'sss', 'tf',
-  'tgg', 'tl', 'tmp', 'trk', 'ts',
-  'wkg', 'zlt'
+  'blsm', 'btg', 'ce', 'dig', 'eid',
+  'estar', 'exp', 'fnc', 'gfe', 'kt',
+  'lagf', 'ldy', 'lfive', 'mty', 'mvpb',
+  'mvpm', 'nav', 'one', 'nt', 'pd',
+  'roll', 'rpg', 'rrr', 'rvn', 'soa',
+  'spt', 'ssg', 'sss', 'tf', 'tgg',
+  'tl', 'tmp', 'trk', 'ts', 'wkg',
+  'zlt'
 ];
 
 exports.handler = (event, context, callback) => {
