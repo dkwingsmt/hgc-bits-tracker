@@ -95,7 +95,7 @@ exports.handler = (event, context, callback) => {
     }, content);
   }).then((result) =>
       promisify(dynamodb.put.bind(dynamodb))({
-        'TableName': 'blizzard-bits-progression1',
+        'TableName': 'blizzard-bits-progression',
         'Item': result
       }).then(() => result)
     )
